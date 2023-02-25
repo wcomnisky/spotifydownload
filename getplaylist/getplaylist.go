@@ -187,6 +187,9 @@ func GetTracks(spotifyURL string) (playlistName string, tracks []Track, err erro
 }
 
 func getAccessToken(spotifyURL string) (accessToken string, err error) {
+
+	spotifyURL = strings.Split(spotifyURL, "?")[0]
+
 	req, err := http.NewRequest("GET", spotifyURL, nil)
 	if err != nil {
 		log.Error(err)

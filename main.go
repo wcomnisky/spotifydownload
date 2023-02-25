@@ -23,7 +23,7 @@ type Result struct {
 	track getplaylist.Track
 }
 
-var debug, verbose bool
+var debug bool
 
 func init() {
 	zerolog.SetGlobalLevel(zerolog.ErrorLevel)
